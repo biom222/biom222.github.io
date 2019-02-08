@@ -1,0 +1,46 @@
+body {
+	font-size: 30px;
+	color: green;
+	background-color: black;
+}
+a {
+	text-decoration: none;
+	color:tomato;
+	display: run-in;
+	margin: 20px 0;
+	border-bottom: 2px solid transparent;
+	transition: 0.5s ease-in;
+	font-size: 30px;
+	color: tomato;
+
+}
+h1 {
+	font-size: 50px;
+	font-family: 'Noto Serif TC', serif;
+	color: #05064a;
+}
+h2 {
+	font-size: 30px;
+	font-family: arial
+	color: black;
+}
+img {
+	max-width: 80%;
+	height: auto;
+	display: block;
+}
+div {
+	width: 80%;
+	margin: auto;
+	background-color: silver;
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.2)
+}
+p{
+	font-size: 30px;
+	font-family: arial
+	color: black;
+}
+a:hover{
+	border-bottom-color: #929aba;
+	color:tomato;
+}
