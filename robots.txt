@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /php/
+Disallow: /libs/
+Allow: /
+
+Sitemap: http://localhost/itservices/sitemap.xml
