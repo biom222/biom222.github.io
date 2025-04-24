@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты | IT Services</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="logo">
+        <img src="../img/logo.png" alt="IT Services" style="height: 80px;">
+    </a>
+    <button id="toggle-theme">🌙</button>
+    <ul class="nav-links">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="about.html">О компании</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="pricing.html">Цены</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+    </ul>
+    <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+
+    <header class="contact-header">
+        <div class="header-content">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы всегда готовы помочь вам с вашими проектами</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <h2>Наши контакты</h2>
+        <div class="contact-info">
+            <div class="contact-box"> <h3>Адрес</h3><p>г. Москва, ул. Примерная, 123</p></div>
+            <div class="contact-box"> <h3>Телефон</h3><p>+7 (900) 123-45-67</p></div>
+            <div class="contact-box"> <h3>Email</h3><p>info@itservices.ru</p></div>
+        </div>
+
+        <h2>Форма обратной связи</h2>
+        <form class="contact-form" action="../send_form.php" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section class="map-section">
+        <h2>Мы на карте</h2>
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=39.8731%2C57.6244&z=15&l=map&pt=39.8731,57.6244,pm2rdl" width="100%" height="400" frameborder="0" allowfullscreen="true"></iframe>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2025 IT Services. Все права защищены.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const status = params.get('status');
+            if (status) {
+                const messageBox = document.createElement('div');
+                messageBox.style.marginTop = '15px';
+                messageBox.style.fontWeight = 'bold';
+
+                if (status === 'success') {
+                    messageBox.textContent = 'Сообщение отправлено!';
+                    messageBox.style.color = 'green';
+                } else if (status === 'mail_error') {
+                    messageBox.textContent = 'Сохранено, но email не отправлен.';
+                    messageBox.style.color = 'orange';
+                } else if (status === 'db_error') {
+                    messageBox.textContent = 'Ошибка базы данных.';
+                    messageBox.style.color = 'red';
+                } else {
+                    messageBox.textContent = 'Ошибка отправки формы.';
+                    messageBox.style.color = 'red';
+                }
+
+                document.querySelector('.contact-form').appendChild(messageBox);
+            }
+        });
+    </script>
+
+    <button id="toTopBtn" title="Наверх">↑</button>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/dark-mode.js"></script>
+
+
+</body>
+</html>

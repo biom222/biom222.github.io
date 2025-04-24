@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | IT Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="portfolio-header">
+    <nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <a href="../index.html" class="logo">
+            <img src="../img/logo.png" alt="IT Services" style="height: 80px;">
+        </a>
+        <button id="toggle-theme">🌙</button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="portfolio.html">Портфолио</a></li>
+            <li><a href="pricing.html">Цены</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <section class="portfolio-section">
+        <h2>Наши работы</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="../img/project1.jpg" alt="Проект 1">
+                <h3>Корпоративный сайт</h3>
+                <p>Создание сайта для логистической компании с интеграцией CRM.</p>
+                <div class="portfolio-btn-container">
+                    <button class="btn details-btn">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="../img/project2.jpg" alt="Проект 2">
+                <h3>Интернет-магазин</h3>
+                <p>Разработка онлайн-магазина с каталогом и платежной системой.</p>
+                <div class="portfolio-btn-container">
+                    <button class="btn details-btn">Подробнее</button>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="../img/project3.jpg" alt="Проект 3">
+                <h3>Сайт-визитка</h3>
+                <p>Простой и стильный сайт для личного бренда.</p>
+                <div class="portfolio-btn-container">
+                    <button class="btn details-btn">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- МОДАЛКА -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Детали проекта</h2>
+            <p>Здесь может быть более подробное описание проекта, используемые технологии, сроки и результат.</p>
+        </div>
+    </div>
+
+
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2025 IT Services. Все права защищены.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/dark-mode.js"></script>
+
+    <button id="toTopBtn" title="Наверх">↑</button>
+
+</body>
+</html>
